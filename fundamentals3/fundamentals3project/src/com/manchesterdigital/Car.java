@@ -1,4 +1,4 @@
 package com.manchesterdigital;
 
-public class car {
+public class Car {
 }
