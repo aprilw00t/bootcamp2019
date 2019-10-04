@@ -13,11 +13,8 @@ public class RegMeNow {
             conversion.put('G', '6');
             conversion.put('B', '8');
             conversion.put('I', '1');
-            for (int position = 0; position < initialNumbers.length(); position++) {
-                Character currentCharacter = initialNumbers.charAt(position);
-                if (conversion.containsKey(currentCharacter)) {
-                    initialNumbers = initialNumbers.replace(currentCharacter, conversion.get(currentCharacter));
-                }
+            for (Map.Entry<Character, Character> entry: conversion.entrySet()) {
+                initialNumbers = initialNumbers.replace(entry.getKey(), entry.getValue());
             }
             return initialNumbers;
         } else {
